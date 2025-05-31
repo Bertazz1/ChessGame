@@ -30,7 +30,7 @@ public class ChessMatch {
     private void initialSetup() {
         // Initial setup of the chess pieces on the board
         placeNewPiece('a', 8,new Rook(board, Color.WHITE));
-        placeNewPiece('e' ,8 ,new Rook(board, Color.WHITE));
+        placeNewPiece('e' ,8 ,new Rook(board, Color.BLACK));
         placeNewPiece('a',6,new King(board, Color.WHITE));
 
     }
