@@ -53,7 +53,7 @@ public class Board {
             throw new BoardException("Position not on the board: " + position);
         }
         if (piece(position) == null) {
-            throw new BoardException("There is no piece on position " + position);
+            return null;
         }
         Piece aux = piece(position);
         aux.position = null; // Clear the position of the piece before removing it
