@@ -1,5 +1,7 @@
 package boardgame;
 
+import java.time.Period;
+
 public class Board {
 
     private int rows;
@@ -44,6 +46,19 @@ public class Board {
         }
         pieces[position.getRow()][position.getColumn()] = piece;
         piece.position = position;
+    }
+
+    public Piece removePiece(Position position) {
+        if (!positionExists(position)) {
+            throw new BoardException("Position not on the board: " + position);
+        }
+        if (piece(position) == null) {
+            throw new BoardException("There is no piece on position " + position);
+        }
+        Piece aux = piece(position);
+        aux.position = null; // Clear the position of the piece before removing it
+        pieces[position.getRow()][position.getColumn()] = null;
+        return aux;
     }
 
     private boolean positionExists(int row, int column) {
