@@ -10,3 +10,6 @@ workspace.xml
 out/*
 /.name
 /misc.xml
+/out/
+.ChessGame.iml
+*.class

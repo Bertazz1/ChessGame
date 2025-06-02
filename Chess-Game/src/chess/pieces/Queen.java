@@ -1,11 +1,13 @@
 package chess.pieces;
 
+import boardgame.Board;
 import boardgame.Position;
 import chess.ChessPiece;
+import chess.Color;
 
 public class Queen extends ChessPiece {
-    public Queen(chess.Color color) {
-        super(new boardgame.Board(8, 8), color);
+    public Queen(Board board, Color color) {
+        super(board, color);
     }
 
     @Override
